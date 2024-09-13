@@ -7,6 +7,7 @@
 # Could you complete the code? Your task is to check the existence of a test element in both a 
 # list and a set 100 times, then print the time it took to process each case.
 
+# WITH SOLUTION
 
 # Importing the necessary libraries
 import time
@@ -27,8 +28,13 @@ def compare_operations():
     test_item = 10**6 + 1  # This item is not in our set or list
 
     # TODO: Time the 100 consecutive operations of checking whether `test_item` is in `data_set` and print the result and time taken
+    start_time = time.time()
+    print("Hash Set Test Result:", test_item in data_set)
+    print("Searching in the Hash Set Took:", time.time() - start_time)
 
     # TODO: Time the 100 consecutive operations of checking whether `test_item` is in `data_list` and print the result and time taken
+    print("List Test Result:", test_item in data_list)
+    print("Searching in the List Took:", time.time() - start_time)
 
 # Execute the function
 compare_operations()
