@@ -6,6 +6,7 @@
 # 
 # Seemingly, there's an issue with the code. Could you identify and resolve it?
 
+# WITH SOLUTION!
 
 # Importing the necessary module
 import time
@@ -24,7 +25,9 @@ def hash_set_operations():
 
     # Adding elements to the set
     for i in range(data_range):
-        names_set.add(unique_names[0])
+
+        # SOLUTION changed unique_names[0] to unique_names[i]
+        names_set.add(unique_names[i]) 
 
     # Define a test element (which is out of the data range and thus is not present in the set)
     test_name = 'Name' + str(data_range + 1)
