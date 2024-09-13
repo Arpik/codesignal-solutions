@@ -27,14 +27,17 @@ def compare_operations():
     # Set and List are ready; now let's define a non-existing item to search for
     test_item = 10**6 + 1  # This item is not in our set or list
 
-    # TODO: Time the 100 consecutive operations of checking whether `test_item` is in `data_set` and print the result and time taken
-    start_time = time.time()
-    print("Hash Set Test Result:", test_item in data_set)
-    print("Searching in the Hash Set Took:", time.time() - start_time)
+    # Timing the 100 consecutive operations for set
+    start_time_set = time.time()
+    for _ in range(100):
+        test_item in data_set
+    print("Hash Set took: ", time.time() - start_time_set)
 
-    # TODO: Time the 100 consecutive operations of checking whether `test_item` is in `data_list` and print the result and time taken
-    print("List Test Result:", test_item in data_list)
-    print("Searching in the List Took:", time.time() - start_time)
+    # Timing the 100 consecutive operations for list
+    start_time_list = time.time()
+    for _ in range(100):
+        test_item in data_list
+    print("List took: ", time.time() - start_time_list)
 
 # Execute the function
 compare_operations()
