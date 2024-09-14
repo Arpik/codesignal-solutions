@@ -39,3 +39,38 @@ def array_intersection(list1, list2):
     set2 = set(list2)
     intersection = set1 & set2
     return sorted(list(intersection))
+
+
+"""
+Problem 2: Non-Repeating Elements
+Our next issue is slightly more complex. We must determine all elements in a given 
+list that appear only once, meaning they don't have any duplicates in the same list.
+
+Problem 2: Problem Actualisation
+To illustrate how this problem might arise in real life, consider analyzing a company's
+sales transactions. Your aim is to identify the products sold exactly once over a specific 
+period. These could potentially be underperforming products that need investigation.
+
+Problem 2: Naive Approach
+A naive method to resolve this pitfall would involve iterating over the list and, for every item,
+checking if it occurs anywhere else in the list. This method is not efficient as it results in a 
+time complexity of O(n**2)
+
+Problem 2: Efficient Approach Explanation
+A more efficient approach would employ a Python set, a built-in data structure that holds an 
+unordered collection of unique elements. Sets provide constant time complexity for the add, 
+remove, and search operations, making this data structure suitable for our problem.
+
+Problem 2: Solution Building
+Here's how you would tackle this predicament:
+First, we create two sets, one for keeping track of the elements we've seen and 
+another for the elements that have repeated.
+
+"""
+nums = []
+seen, repeated = set(), set()
+for num in nums:
+    if num in seen:
+        repeated.add(num)
+    else: 
+        seen.add(num)
