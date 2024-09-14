@@ -1,26 +1,14 @@
 """
-Problem 1: Array Intersection
-Our journey begins with the challenge of identifying the intersection of two arrays. 
-In other words, we aim to pinpoint the elements that appear in both of the given lists. 
-It's important to note that we're interested in locating unique common elements - even if 
-an element appears more than once in both lists, it should only feature once in our output.
+Task_1 Array Intersection
 
-Problem 1: Problem Actualisation
-To elucidate how this problem might emerge in a real-world scenario, 
-presume that you're managing a database for a marketing company. 
-You have two customer lists, each obtained through various marketing strategies. 
-Your task is to determine the customers that both strategies successfully targeted. 
-Essentially, these are the common elements in your two lists.
+Find all non-repeating elements in a list, which means identifying 
+items that appear only once. This problem can arise in real-life scenarios, such as 
+analyzing sales data to find products sold exactly once.
 
-# Problem 1: Naive Approach
-
-Suppose you decide to resolve this problem in the most uncomplicated way possible: 
-for each customer (or element) on the first list, you verify if they’re also present 
-on the second list. Once you identify a match, you must confirm that this customer 
-hasn't previously been added to your output. Though this solution would, in the end, 
-yield the correct list of shared customers, it would demand a lot of computational 
-resources, as you would be operating at a time complexity of O(n**2) due to the 
-nested lookups – far from ideal! 
+A naive approach would involve checking every item against the rest of the list, but 
+this results in inefficient O(n²) time complexity. A more efficient solution uses a 
+Python set, which allows for faster operations. The approach involves using two sets: 
+one for elements seen and another for repeated elements.
 
 Problem 1: Efficient Approach Explanation
 Here, the unique functionality of Python's set data structure proves beneficial. 
@@ -42,31 +30,19 @@ def array_intersection(list1, list2):
 
 
 """
-Problem 2: Non-Repeating Elements
-Our next issue is slightly more complex. We must determine all elements in a given 
-list that appear only once, meaning they don't have any duplicates in the same list.
+Task_2 Non-repeating elements
 
-Problem 2: Problem Actualisation
-To illustrate how this problem might arise in real life, consider analyzing a company's
-sales transactions. Your aim is to identify the products sold exactly once over a specific 
-period. These could potentially be underperforming products that need investigation.
-
-Problem 2: Naive Approach
-A naive method to resolve this pitfall would involve iterating over the list and, for every item,
-checking if it occurs anywhere else in the list. This method is not efficient as it results in a 
-time complexity of O(n**2)
-
-Problem 2: Efficient Approach Explanation
-A more efficient approach would employ a Python set, a built-in data structure that holds an 
-unordered collection of unique elements. Sets provide constant time complexity for the add, 
-remove, and search operations, making this data structure suitable for our problem.
-
-Problem 2: Solution Building
-Here's how you would tackle this predicament:
-First, we create two sets, one for keeping track of the elements we've seen and 
-another for the elements that have repeated.
+The problem involves finding elements in a list that appear only once. 
+A real-world example could be identifying products sold only once in a 
+company's transactions. 
+A naive solution checks each item against the rest, 
+resulting in O(n²) time complexity. 
+A more efficient approach uses Python sets, which offer constant time operations. 
+The solution involves creating two sets: 
+one to track seen elements and another for repeated elements.
 
 """
+
 nums = []
 seen, repeated = set(), set()
 for num in nums:
