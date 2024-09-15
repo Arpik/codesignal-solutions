@@ -51,3 +51,33 @@ def non_repeating_elements(nums):
         else: 
             seen.add(num)
     return list(seen - repeated)
+
+
+"""
+
+Task_3 Problem 3: Unique Elements
+The third problem compels us to find elements unique to each of 
+the two given lists, i.e. given two lists, list1 and list2, we 
+need to find elements that exist only in list1 and elements that 
+exist only in list2, respectively.
+
+"""
+
+def unique_elements(list_1, list_2):
+     set1 = set(list_1)
+     set2 = set(list_2)
+
+     # Get unique to each set elements by using set difference
+     unique_to_1 = sorted(list(set1 - set2))
+     unique_to_2 = sorted(list(set2 - set1))
+
+     return (unique_to_1, unique_to_2)
+
+    
+
+
+        
+       
+
+
+
