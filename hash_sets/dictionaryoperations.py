@@ -43,10 +43,11 @@ one to track seen elements and another for repeated elements.
 
 """
 
-nums = []
-seen, repeated = set(), set()
-for num in nums:
-    if num in seen:
-        repeated.add(num)
-    else: 
-        seen.add(num)
+def non_repeating_elements(nums):
+    seen, repeated = set(), set()
+    for num in nums:
+        if num in seen:
+            repeated.add(num)
+        else: 
+            seen.add(num)
+    return list(seen - repeated)
